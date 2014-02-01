@@ -3,7 +3,7 @@ LinuxJavaFixes
 
 Simple javaagent to fix problems in linux with java.
 
-1. Aimed to resolve bug  with java gui apps: "Hotkeys not functional in non-latin keyboard layout in 13.10 and 14.04" https://bugs.launchpad.net/unity/+bug/1226962
+1. Aimed to walkaround bug  with java gui apps: "Hotkeys not functional in non-latin keyboard layout in 13.10 and 14.04" https://bugs.launchpad.net/unity/+bug/1226962
 
 My patch just instruments jdk class XKeysym - adds mapping from non latin layout to latin
 
