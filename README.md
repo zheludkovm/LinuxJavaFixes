@@ -105,7 +105,7 @@ for example
 
 and replace hex codes wuth yours
 
-to use custom mapping use following option to run app :
+use following option to run app with custom mapping :
 
 -javaagent:[path]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar=[your mapping file]
 
