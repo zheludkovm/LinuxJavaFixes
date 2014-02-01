@@ -43,7 +43,7 @@ if you want another mapping you can create it by yourself :
 
 run any app with java vm option  -javaagent:[path]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar=print
 
-after that this utily begin print to console codes of entered symbols using format
+after that utily begin print to console entered symbol codes using format
 
 XKeysymPatchAgent.keysym=[hex code]
 
