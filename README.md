@@ -19,13 +19,13 @@ to java run string
 
 add line to soapui.sh
 
-JAVA_OPTS="$JAVA_OPTS java -javaagent:<path>/LinuxJavaFixes-1.0.0-SNAPSHOT.jar
+JAVA_OPTS="$JAVA_OPTS java -javaagent:[path]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar
 
 2.oracle sqldeveloper
 
 add line to sqldeveloper/ide/bin/jdk.conf
 
-AddVMOption -javaagent:<path>/LinuxJavaFixes-1.0.0-SNAPSHOT.jar
+AddVMOption -javaagent:[path]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar
 
 3. intellij idea
 
@@ -37,13 +37,13 @@ out of the box this app use russian to latin mapping
 
 if you want another mapping you can create it by yourself :
 
-run any app with java vm option  -javaagent:<path>/LinuxJavaFixes-1.0.0-SNAPSHOT.jar=print
+run any app with java vm option  -javaagent:[path]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar=print
 
 after that this utily begin print to console codes of entered symbols using format
 
-XKeysymPatchAgent.keysym=<hex code>
+XKeysymPatchAgent.keysym=[hex code]
 
-then create file using format <hex code>=<latin code of the same button>
+then create file using format [hex code]=[latin code of the same button]
 
 for example
 
@@ -103,6 +103,6 @@ and replace hex codes wuth yours
 
 to use custom mapping use following option to run app :
 
--javaagent:<path>/LinuxJavaFixes-1.0.0-SNAPSHOT.jar=<<your mapping file>>
+-javaagent:[path]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar=[your mapping file]
 
 
