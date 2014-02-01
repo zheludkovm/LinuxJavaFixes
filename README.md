@@ -31,7 +31,7 @@ AddVMOption -javaagent:[path]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar
 
 add line to idea64.vmoptions or idea.vmoptions
 
--javaagent:<path>/LinuxJavaFixes-1.0.0-SNAPSHOT.jar
+-javaagent:[path]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar
 
 out of the box this app use russian to latin mapping
 
