@@ -1,0 +1,2 @@
+Premain-Class: net.x11.patch.XKeysymPatchAgent
+Boot-Class-Path: javassist-3.12.1.GA.jar
