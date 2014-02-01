@@ -15,6 +15,8 @@ To run any java application just add
 
 to java run string
 
+Examples
+
 1.soapui
 
 add line to soapui.sh
@@ -27,11 +29,13 @@ add line to sqldeveloper/ide/bin/jdk.conf
 
 AddVMOption -javaagent:[path]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar
 
-3. intellij idea
+3.intellij idea
 
 add line to idea64.vmoptions or idea.vmoptions
 
 -javaagent:[path]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar
+
+===============
 
 out of the box this app use russian to latin mapping
 
