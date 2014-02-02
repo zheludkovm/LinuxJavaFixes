@@ -11,7 +11,7 @@ This patch uses javassist to instrument class, so dont forget copy javassist lib
 
 To run any java application just add
 
--javaagent:target/LinuxJavaFixes-1.0.0-SNAPSHOT.jar
+-javaagent:[path]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar
 
 to java run string
 
