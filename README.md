@@ -2,8 +2,8 @@ LinuxJavaFixes
 ============
 added eclipse support 
 
-to patch key problem in ubuntu -
-add following line to eclipse.ini
+to patch key problem in ubuntu - add following line to eclipse.ini
+
 -javaagent:[path]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar=swt
 
 dont forget copy javassist lib from build to the same directory as LinuxJavaFixes-1.0.0-SNAPSHOT.jar
