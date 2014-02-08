@@ -1,4 +1,24 @@
 LinuxJavaFixes
+============
+added eclipse support 
+
+to patch key problem in ubuntu -
+add following line to eclipse.ini
+-javaagent:[path]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar=swt
+
+dont forget copy javassist lib from build to the same directory as LinuxJavaFixes-1.0.0-SNAPSHOT.jar
+
+out of the box it support russian to latin keybindings
+
+if you want create custom keybinding, add 
+-javaagent:[path]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar=swt:print
+then grab codes and create properties file with mapping
+[your locale key]=[latin key]
+
+then run eclipse wuth following config
+
+-javaagent:[path]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar=swt:[path to your mapping file]
+
 =============
 
 Simple javaagent to fix problems in linux with java.
