@@ -11,8 +11,11 @@ dont forget copy javassist lib from build to the same directory as LinuxJavaFixe
 out of the box it support russian to latin keybindings
 
 if you want create custom keybinding, add 
+
 -javaagent:[path]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar=swt:print
+
 then grab codes and create properties file with mapping
+
 [your locale key]=[latin key]
 
 then run eclipse wuth following config
