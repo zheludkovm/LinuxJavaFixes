@@ -14,13 +14,14 @@ LinuxJavaFixes-1.0.0-SNAPSHOT.jar
 
 javassist-3.12.1.GA.jar
 
+
 add 
 
 -javaagent:[path to directory with jar files]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar
 
 to java run string
 
-Examples
+Examples :
 
 -soapui
 
