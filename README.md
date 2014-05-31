@@ -5,7 +5,8 @@ Simple javaagent to fix problems in linux with non latin hotkeys in gui java app
 
 Aimed to walkaround bug  with java gui apps: "Hotkeys not functional in non-latin keyboard layout in 13.10 and 14.04" https://bugs.launchpad.net/unity/+bug/1226962
 
-1. Swing java apps (intellij idea, oracle sql developer etc)
+============
+A. Swing java apps (intellij idea, oracle sql developer etc)
 
 copy to any directory 2 files :
 
@@ -19,27 +20,27 @@ to java run string
 
 Examples
 
-a.soapui
+-soapui
 
-add line to soapui.sh
+  add line to soapui.sh
 
-JAVA_OPTS="$JAVA_OPTS java -javaagent:[path]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar
+  JAVA_OPTS="$JAVA_OPTS java -javaagent:[path to directory with jar files]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar
 
-b.oracle sqldeveloper
+-oracle sqldeveloper
 
-add line to sqldeveloper/ide/bin/jdk.conf
+  add line to sqldeveloper/ide/bin/jdk.conf
 
-AddVMOption -javaagent:[path to directory with jar files]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar
+  AddVMOption -javaagent:[path to directory with jar files]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar
 
-c.intellij idea
+-intellij idea
 
-add line to idea64.vmoptions or idea.vmoptions
+  add line to idea64.vmoptions or idea.vmoptions
 
--javaagent:[path to directory with jar files]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar
+  -javaagent:[path to directory with jar files]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar
 
 ============
 
-2. Eclipse
+Eclipse
 
 copy to any directory 2 files :
 
@@ -57,7 +58,7 @@ add following line to eclipse.ini
 Advanced part
 
 ============
-3. Modify kaybindings for swing apps in case non russian layout
+Modify kaybindings for swing apps in case non russian layout
  
 if you want another mapping you can create it by yourself :
 
@@ -84,7 +85,7 @@ use following option to run app with custom mapping :
 -javaagent:[path to directory with jar files]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar=[your mapping file]
 
 ============
-4. modify keybindings for swt in case non russian layout
+Modify keybindings for swt in case non russian layout
 
 add following line to eclipse.ini 
 
