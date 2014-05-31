@@ -37,6 +37,7 @@ add line to idea64.vmoptions or idea.vmoptions
 
 -javaagent:[path to directory with jar files]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar
 
+============
 
 2. Eclipse
 
@@ -51,6 +52,11 @@ add following line to eclipse.ini
 -javaagent:[path to directory with jar files]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar=swt
 
 
+============
+
+Advanced part
+
+============
 3. Modify kaybindings for swing apps in case non russian layout
  
 if you want another mapping you can create it by yourself :
@@ -77,6 +83,7 @@ use following option to run app with custom mapping :
 
 -javaagent:[path to directory with jar files]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar=[your mapping file]
 
+============
 4. modify keybindings for swt in case non russian layout
 
 add following line to eclipse.ini 
