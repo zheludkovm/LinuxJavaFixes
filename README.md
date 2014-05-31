@@ -14,7 +14,9 @@ LinuxJavaFixes-1.0.0-SNAPSHOT.jar
 
 javassist-3.12.1.GA.jar
 
-add -javaagent:[path to directory with jar files]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar
+add 
+
+-javaagent:[path to directory with jar files]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar
 
 to java run string
 
@@ -40,7 +42,7 @@ Examples
 
 ============
 
-Eclipse
+B. Eclipse
 
 copy to any directory 2 files :
 
@@ -58,7 +60,7 @@ add following line to eclipse.ini
 Advanced part
 
 ============
-Modify kaybindings for swing apps in case non russian layout
+C. Modify kaybindings for swing apps in case non russian layout
  
 if you want another mapping you can create it by yourself :
 
@@ -85,7 +87,7 @@ use following option to run app with custom mapping :
 -javaagent:[path to directory with jar files]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar=[your mapping file]
 
 ============
-Modify keybindings for swt in case non russian layout
+D. Modify keybindings for swt in case non russian layout
 
 add following line to eclipse.ini 
 
