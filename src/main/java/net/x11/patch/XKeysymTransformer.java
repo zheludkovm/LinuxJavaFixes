@@ -25,7 +25,7 @@ public class XKeysymTransformer implements ClassFileTransformer {
     @Override
     public byte[] transform(ClassLoader loader, String className, Class<?> classBeingRedefined, ProtectionDomain protectionDomain, byte[] classfileBuffer) throws IllegalClassFormatException {
         try {
-            return className.equals(XNET_PROTOCOL) ? doClass(className, classBeingRedefined, classfileBuffer) : classfileBuffer;
+            return className!=null && className.equals(XNET_PROTOCOL) ? doClass(className, classBeingRedefined, classfileBuffer) : classfileBuffer;
         } catch (Throwable err) {
             err.printStackTrace();
             return classfileBuffer;
