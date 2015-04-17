@@ -1,105 +1,92 @@
-LinuxJavaFixes
-============
+#LinuxJavaFixes
 
 Simple javaagent to fix problems in linux with non latin hotkeys in gui java applications.
 
 Aimed to walkaround bug  with java gui apps: "Hotkeys not functional in non-latin keyboard layout in 13.10 and 14.04" https://bugs.launchpad.net/unity/+bug/1226962
 
-============
-A. Swing java apps (intellij idea, oracle sql developer etc)
+## Swing java apps (intellij idea, oracle sql developer etc)
 
-copy to any directory 2 files :
+Copy to any directory 2 files:
 
-LinuxJavaFixes-1.0.0-SNAPSHOT.jar
+*LinuxJavaFixes-1.0.0-SNAPSHOT.jar*
 
-javassist-3.12.1.GA.jar
-
+*javassist-3.12.1.GA.jar*
 
 add 
 
--javaagent:[path to directory with jar files]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar
+`-javaagent:[path to directory with jar files]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar`
 
 to java run string
 
-Examples :
+#### Examples:
 
--soapui
+##### SoapUI
 
-  add line to soapui.sh
+Add line to *soapui.sh*.
 
-  JAVA_OPTS="$JAVA_OPTS java -javaagent:[path to directory with jar files]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar
+`JAVA_OPTS="$JAVA_OPTS java -javaagent:[path to directory with jar files]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar`
 
--oracle sqldeveloper
+##### Oracle SQL Developer
 
-  add line to sqldeveloper/ide/bin/jdk.conf
+Add line to *sqldeveloper/ide/bin/jdk.conf*.
 
-  AddVMOption -javaagent:[path to directory with jar files]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar
+`AddVMOption -javaagent:[path to directory with jar files]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar`
 
--intellij idea
+##### IntelliJ Idea
 
-  add line to idea64.vmoptions or idea.vmoptions
+Add line to *idea64.vmoptions* or *idea.vmoptions*
 
-  -javaagent:[path to directory with jar files]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar
+`-javaagent:[path to directory with jar files]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar`
 
-============
+## Eclipse
 
-B. Eclipse
+Copy to any directory 2 files:
 
-copy to any directory 2 files :
+*LinuxJavaFixes-1.0.0-SNAPSHOT.jar*
 
-LinuxJavaFixes-1.0.0-SNAPSHOT.jar
+*javassist-3.12.1.GA.jar*
 
-javassist-3.12.1.GA.jar
+Add following line to *eclipse.ini*.
 
-add following line to eclipse.ini
+`-javaagent:[path to directory with jar files]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar=swt`
 
--javaagent:[path to directory with jar files]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar=swt
+## Advanced part
 
-
-============
-
-Advanced part
-
-============
-C. Modify kaybindings for swing apps in case non russian layout
+### Modify kaybindings for swing apps in case non russian layout
  
-if you want another mapping you can create it by yourself :
+If you want another mapping you can create it by yourself:
 
-run any app with java vm option  -javaagent:[path]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar=print
+  - run any app with java vm option `-javaagent:[path]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar=print`
+  - after that utily begin print to console entered symbol codes using format
 
-after that utily begin print to console entered symbol codes using format
+`XKeysymPatchAgent.keysym=[hex code]`
 
-XKeysymPatchAgent.keysym=[hex code]
+  - then create file using format `[hex code]=[latin code of the same button]`
 
-then create file using format [hex code]=[latin code of the same button]
+#### Example:
 
-for example
-
+```
 6ca=Q
 
 6c3=W
+```
+etc.
 
-etc
+  - replace hex codes wuth yours
+  - use following option to run app with custom mapping :
 
-and replace hex codes wuth yours
+`-javaagent:[path to directory with jar files]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar=[your mapping file]`
 
-use following option to run app with custom mapping :
+### Modify keybindings for swt in case non russian layout
 
--javaagent:[path to directory with jar files]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar=[your mapping file]
+  - add following line to eclipse.ini 
 
-============
-D. Modify keybindings for swt in case non russian layout
+`-javaagent:[path]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar=swt:print`
 
-add following line to eclipse.ini 
+  - then grab codes and create properties file with mapping
 
--javaagent:[path]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar=swt:print
+`[your locale key]=[latin key]`
 
-then grab codes and create properties file with mapping
+  - then run eclipse wuth following config
 
-[your locale key]=[latin key]
-
-then run eclipse wuth following config
-
--javaagent:[path]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar=swt:[path to your mapping file]
-
-
+`-javaagent:[path]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar=swt:[path to your mapping file]`
