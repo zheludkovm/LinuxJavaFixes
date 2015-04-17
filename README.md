@@ -4,13 +4,13 @@ Simple javaagent to fix problems in linux with non latin hotkeys in gui java app
 
 Aimed to walkaround bug  with java gui apps: "Hotkeys not functional in non-latin keyboard layout in 13.10 and 14.04" https://bugs.launchpad.net/unity/+bug/1226962
 
-## Swing java apps (intellij idea, oracle sql developer etc)
+## Swing java apps (IntelliJ Idea, Oracle SQL Developer etc.)
 
 Copy to any directory 2 files:
 
-*LinuxJavaFixes-1.0.0-SNAPSHOT.jar*
+**LinuxJavaFixes-1.0.0-SNAPSHOT.jar**
 
-*javassist-3.12.1.GA.jar*
+**javassist-3.12.1.GA.jar**
 
 add 
 
@@ -22,19 +22,19 @@ to java run string
 
 ##### SoapUI
 
-Add line to *soapui.sh*.
+Add line to **soapui.sh**.
 
 `JAVA_OPTS="$JAVA_OPTS java -javaagent:[path to directory with jar files]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar`
 
 ##### Oracle SQL Developer
 
-Add line to *sqldeveloper/ide/bin/jdk.conf*.
+Add line to **sqldeveloper/ide/bin/jdk.conf**.
 
 `AddVMOption -javaagent:[path to directory with jar files]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar`
 
 ##### IntelliJ Idea
 
-Add line to *idea64.vmoptions* or *idea.vmoptions*
+Add line to **idea64.vmoptions* or *idea.vmoptions**
 
 `-javaagent:[path to directory with jar files]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar`
 
@@ -42,11 +42,11 @@ Add line to *idea64.vmoptions* or *idea.vmoptions*
 
 Copy to any directory 2 files:
 
-*LinuxJavaFixes-1.0.0-SNAPSHOT.jar*
+**LinuxJavaFixes-1.0.0-SNAPSHOT.jar**
 
-*javassist-3.12.1.GA.jar*
+**javassist-3.12.1.GA.jar**
 
-Add following line to *eclipse.ini*.
+Add following line to **eclipse.ini**.
 
 `-javaagent:[path to directory with jar files]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar=swt`
 
@@ -73,7 +73,7 @@ If you want another mapping you can create it by yourself:
 etc.
 
   - replace hex codes wuth yours
-  - use following option to run app with custom mapping :
+  - use following option to run app with custom mapping:
 
 `-javaagent:[path to directory with jar files]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar=[your mapping file]`
 
