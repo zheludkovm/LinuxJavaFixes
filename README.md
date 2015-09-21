@@ -34,9 +34,23 @@ Add line to **sqldeveloper/ide/bin/jdk.conf**.
 
 ##### IntelliJ Idea
 
-Add line to **idea64.vmoptions* or *idea.vmoptions**
+- Add line to **idea64.vmoptions** or **idea.vmoptions**
 
 `-javaagent:[path to directory with jar files]/LinuxJavaFixes-1.0.0-SNAPSHOT.jar`
+
+- Remove launcher from unity dock.
+- Start IDEA from terminal via command:
+
+`sh /path/to/idea/idea.sh`
+
+e.g.
+
+`sh /home/user/Documents/idea-IU-141.1010.3/bin/idea.sh'`
+
+Where **user** is your username.
+- In IDEA go to Tools - Create Desktop Entry... (Create without check for all users will be enough). In IDEA event log you'll see notification about success creation. Close IDEA.
+- Run IDEA again from terminal. On unity launcher press right mouse button at IDEA icon and click on 'Lock to Launcher'.
+- Now you can close IDEA and run it via unity launcher. Cyrillic keys should work.
 
 ## Eclipse
 
