@@ -45,7 +45,7 @@ Add line to **sqldeveloper/ide/bin/jdk.conf**.
 
 e.g.
 
-`sh /home/user/Documents/idea-IU-141.1010.3/bin/idea.sh'`
+`sh /home/user/Documents/idea-IU-141.1010.3/bin/idea.sh`
 
 Where **user** is your username.
 - In IDEA go to Tools - Create Desktop Entry... (Create without check for all users will be enough). In IDEA event log you'll see notification about success creation. Close IDEA.
