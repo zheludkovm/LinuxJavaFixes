@@ -56,7 +56,7 @@ e.g.
 `sh /home/user/Documents/idea-IU-141.1010.3/bin/idea.sh`
 
 Where **user** is your username.
-- In IDEA go to Tools - Create Desktop Entry... (Create without check for all users will be enough). In IDEA event log you'll see notification about success creation. Close IDEA.
+- In IDEA go to Tools - Create Desktop Entry... (Create without check for all users will be enough). In IDEA event log you'll see notification about success creation.
 - Logout from session and login again.
 - Run IDEA again from terminal. On unity launcher press right mouse button at IDEA icon and click on 'Lock to Launcher'.
 - Now you can run IDEA via unity launcher. Cyrillic keys should work.
