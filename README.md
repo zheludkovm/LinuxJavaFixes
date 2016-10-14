@@ -2,7 +2,7 @@
 
 Simple javaagent to fix problems in linux with non latin hotkeys in gui java applications.
 
-Aimed to walkaround bug  with java gui apps: "Hotkeys not functional in non-latin keyboard layout in 13.10 and 14.04" https://bugs.launchpad.net/unity/+bug/1226962
+Aimed to walkaround bug  with java gui apps: "Hotkeys not functional in non-latin keyboard layout in 13.10 - 16.04, " https://bugs.launchpad.net/unity/+bug/1226962
 
 ## Swing java apps (IntelliJ Idea, Oracle SQL Developer etc.)
 
