@@ -5,3 +5,7 @@
 .classpath
 .project
 /target
+
+# Intellij IDEA files
+/.idea
+*.iml
